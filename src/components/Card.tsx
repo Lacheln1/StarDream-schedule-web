@@ -1,6 +1,5 @@
 import { useState } from "react";
 import iruneProfileImg from "../images/irune_profile.png";
-import ureiProfileImg from "../images/urei_profile.png";
 import { motion } from "framer-motion";
 
 const Card = () => {
@@ -8,9 +7,10 @@ const Card = () => {
     return (
         <div className="wrapper flex">
             <motion.div
+                whileHover={{ y: -5, boxShadow: "0 8px 20px rgba(0,0,0,0.3)" }}
                 className="border rounded-2xl text-center w-48 h-60 flex flex-col"
                 style={{ transformStyle: "preserve-3d" }}
-                transition={{ duration: 0.7 }}
+                transition={{ duration: 0.5 }}
                 animate={{ rotateY: flip ? 0 : 180 }}
                 onClick={() => setFlip((prev) => !prev)}
             >
@@ -37,21 +37,27 @@ const Card = () => {
                     </div>
                 </motion.div>
                 <motion.div
-                    className="back"
+                    className="back flex flex-col justify-center h-full"
                     style={{
                         rotateY: 180,
-                        display: flip ? "none" : "block",
+                        display: flip ? "none" : "flex",
                     }}
                 >
-                    <div className="time-container flex flex-col text-center justify-center items-center my-3">
-                        <div className="border rounded-2xl w-28 p-1">
-                            <div className="time text-xl">pm:05:00</div>
+                    <div className="time-container flex flex-col items-center gap-5 my-3">
+                        <div className="border rounded-2xl w-28 p-1 hover:bg-gray-100">
+                            <a href="">
+                                <div className="time text-xl">치지직</div>
+                            </a>
                         </div>
-                        <div className="border rounded-2xl w-28 p-1">
-                            <div className="time text-xl">pm:05:00</div>
+                        <div className="border rounded-2xl w-28 p-1 hover:bg-gray-100">
+                            <a href="">
+                                <div className="time text-xl">유튜브</div>
+                            </a>
                         </div>
-                        <div className="border rounded-2xl w-28 p-1">
-                            <div className="time text-xl">pm:05:00</div>
+                        <div className="border rounded-2xl w-28 p-1 hover:bg-gray-100">
+                            <a href="https://x.com/irune030">
+                                <div className="time text-xl">x</div>
+                            </a>
                         </div>
                     </div>
                 </motion.div>
