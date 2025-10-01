@@ -1,4 +1,8 @@
 import { StreamerSchedule } from "../types/schedule";
+import UreiProfileImg from "../images/urei_profile.png";
+import OnhayanProfileImg from "../images/onhayan_profile.png";
+import HanabinProfileImg from "../images/hanavin_profile.png";
+import IruneProfileImg from "../images/irune_profile.png";
 
 export const UreiSchedule: StreamerSchedule = {
     mon: [{ todo: "그림뱅 + 게임정하기", time: "19:00" }],
@@ -8,7 +12,7 @@ export const UreiSchedule: StreamerSchedule = {
     fri: [{ todo: "그림뱅", time: "19:00" }],
     sat: [{ todo: "정규 노래방", time: "19:00" }],
     sun: [{ todo: "유레이의 사연라디오", time: "19:00" }],
-    profileImg: "../images/urei_profile.png",
+    profileImg: UreiProfileImg,
     chzzUrl: "https://chzzk.naver.com/4f650f02bc4ab38a998d74e3abb1b68b",
     youtubeUrl: "https://www.youtube.com/@Urei0w0",
     xUrl: "https://x.com/Urei0w0",
@@ -22,7 +26,7 @@ export const OnhayanSchedule: StreamerSchedule = {
     fri: [{ todo: "ASMR 야식먹방", time: "21:00" }],
     sat: [{ todo: "시간표작성", time: "09:00" }],
     sun: [{ todo: "OFFLINE", time: "" }],
-    profileImg: "../images/onhayan_profile.png",
+    profileImg: OnhayanProfileImg,
     chzzUrl: "https://chzzk.naver.com/91caa53fc6cf5ee3cdbc802bd23bf155",
     youtubeUrl: "https://www.youtube.com/@ONHAYAN090",
     xUrl: "https://x.com/onwhite090",
@@ -36,7 +40,7 @@ export const HanabinSchedule: StreamerSchedule = {
     fri: [{ todo: "음식티어 정하기", time: "14:00" }],
     sat: [{ todo: "DYING LIGHT : THE BEAST", time: "22:00" }],
     sun: [{ todo: "DYING LIGHT : THE BEAST", time: "14:00" }],
-    profileImg: "../images/hanavin_profile.png",
+    profileImg: HanabinProfileImg,
     chzzUrl: "https://chzzk.naver.com/7ca6c5f45a9b16f75970f54c309623c0",
     youtubeUrl: "https://www.youtube.com/@Hanavin007",
     xUrl: "https://x.com/hanavin007",
@@ -50,7 +54,7 @@ export const IruneSchedule: StreamerSchedule = {
     fri: [{ todo: "소울류 뉴비가 엘밤통 솔로맛보기", time: "16:00" }],
     sat: [{ todo: "OFFLINE", time: "" }],
     sun: [{ todo: "뽀찌들에게 받는 고해성사", time: "14:00" }],
-    profileImg: "../images/irune_profile.png",
+    profileImg: IruneProfileImg,
     chzzUrl: "https://chzzk.naver.com/e984779fd445e71bfd8c99106e432bf1",
     youtubeUrl: "https://www.youtube.com/@IRUNE030",
     xUrl: "https://x.com/irune030",
