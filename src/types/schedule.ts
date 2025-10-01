@@ -19,6 +19,7 @@ export interface StreamerLinks {
     chzzUrl: string;
     youtubeUrl: string;
     xUrl: string;
+    personalColor: string;
 }
 
 export interface StreamerSchedule extends DaySchedule, StreamerLinks {}

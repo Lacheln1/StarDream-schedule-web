@@ -22,7 +22,9 @@ const MainPage = () => {
     return (
         <div className="min-h-screen bg-gray-50 p-8">
             <div className="max-w-[1800px] mx-auto">
-                <h1 className="text-4xl font-bold text-center mb-8">스트리머 스케줄</h1>
+                <h1 className="text-4xl font-bold text-center mb-8">
+                    스타드림 9.29~10.05 통합시간표
+                </h1>
 
                 <div className="grid grid-cols-8 gap-4 mb-4">
                     <div className="w-32"></div>

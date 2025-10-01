@@ -24,7 +24,10 @@ const Card = ({ schedule, day }: CardProps) => {
             <motion.div
                 whileHover={{ y: -5, boxShadow: "0 8px 20px rgba(0,0,0,0.3)" }}
                 className="border rounded-2xl text-center w-48 h-56 flex flex-col "
-                style={{ transformStyle: "preserve-3d" }}
+                style={{
+                    transformStyle: "preserve-3d",
+                    backgroundColor: `${schedule.personalColor}`,
+                }}
                 transition={{ duration: 0.5 }}
                 animate={{ rotateY: flip ? 0 : 180 }}
                 onClick={() => setFlip((prev) => !prev)}
@@ -34,7 +37,7 @@ const Card = ({ schedule, day }: CardProps) => {
                     style={{ display: flip ? "flex" : "none" }}
                 >
                     <div className="time-container flex justify-center min-h-10 mt-2">
-                        <div className="border rounded-2xl w-28 p-1">
+                        <div className="border rounded-2xl w-28 p-1 bg-white">
                             <div className="time text-xl">
                                 {daySchedule.time ? daySchedule.time : `휴방`}
                             </div>
@@ -63,17 +66,17 @@ const Card = ({ schedule, day }: CardProps) => {
                     }}
                 >
                     <div className="time-container flex flex-col items-center gap-5 my-3">
-                        <div className="border rounded-2xl w-28 p-1 hover:bg-gray-100">
+                        <div className="border rounded-2xl w-28 p-1 bg-white hover:bg-gray-100">
                             <a href={schedule.chzzUrl}>
                                 <div className="time text-xl">치지직</div>
                             </a>
                         </div>
-                        <div className="border rounded-2xl w-28 p-1 hover:bg-gray-100">
+                        <div className="border rounded-2xl w-28 p-1 bg-white hover:bg-gray-100">
                             <a href={schedule.youtubeUrl}>
                                 <div className="time text-xl">유튜브</div>
                             </a>
                         </div>
-                        <div className="border rounded-2xl w-28 p-1 hover:bg-gray-100">
+                        <div className="border rounded-2xl w-28 p-1 bg-white hover:bg-gray-100">
                             <a href={schedule.xUrl}>
                                 <div className="time text-xl">x</div>
                             </a>

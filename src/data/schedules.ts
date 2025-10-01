@@ -16,6 +16,7 @@ export const UreiSchedule: StreamerSchedule = {
     chzzUrl: "https://chzzk.naver.com/4f650f02bc4ab38a998d74e3abb1b68b",
     youtubeUrl: "https://www.youtube.com/@Urei0w0",
     xUrl: "https://x.com/Urei0w0",
+    personalColor: "#f4e8fe",
 };
 
 export const OnhayanSchedule: StreamerSchedule = {
@@ -30,6 +31,7 @@ export const OnhayanSchedule: StreamerSchedule = {
     chzzUrl: "https://chzzk.naver.com/91caa53fc6cf5ee3cdbc802bd23bf155",
     youtubeUrl: "https://www.youtube.com/@ONHAYAN090",
     xUrl: "https://x.com/onwhite090",
+    personalColor: "#f0ffec",
 };
 
 export const HanabinSchedule: StreamerSchedule = {
@@ -44,6 +46,7 @@ export const HanabinSchedule: StreamerSchedule = {
     chzzUrl: "https://chzzk.naver.com/7ca6c5f45a9b16f75970f54c309623c0",
     youtubeUrl: "https://www.youtube.com/@Hanavin007",
     xUrl: "https://x.com/hanavin007",
+    personalColor: "#e8edff",
 };
 
 export const IruneSchedule: StreamerSchedule = {
@@ -58,4 +61,5 @@ export const IruneSchedule: StreamerSchedule = {
     chzzUrl: "https://chzzk.naver.com/e984779fd445e71bfd8c99106e432bf1",
     youtubeUrl: "https://www.youtube.com/@IRUNE030",
     xUrl: "https://x.com/irune030",
+    personalColor: "#ffe8ee",
 };
