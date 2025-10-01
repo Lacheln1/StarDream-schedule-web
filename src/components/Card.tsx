@@ -8,14 +8,14 @@ const Card = () => {
         <div className="wrapper flex">
             <motion.div
                 whileHover={{ y: -5, boxShadow: "0 8px 20px rgba(0,0,0,0.3)" }}
-                className="border rounded-2xl text-center w-48 h-60 flex flex-col"
+                className="border rounded-2xl text-center w-48 h-60 flex flex-col "
                 style={{ transformStyle: "preserve-3d" }}
                 transition={{ duration: 0.5 }}
                 animate={{ rotateY: flip ? 0 : 180 }}
                 onClick={() => setFlip((prev) => !prev)}
             >
                 <motion.div
-                    className="front flex flex-col h-full"
+                    className="front flex flex-col h-full gap-1"
                     style={{ display: flip ? "flex" : "none" }}
                 >
                     <div className="time-container flex justify-center mt-3">
@@ -23,9 +23,11 @@ const Card = () => {
                             <div className="time text-xl">pm:03:00</div>
                         </div>
                     </div>
+
                     <div className="todo-container">
                         <div className="todo text-xl">on 챗</div>
                     </div>
+
                     <div className="chracterimage-container flex justify-center mt-auto">
                         <div className="w-[150px] h-[150px] flex items-center justify-center">
                             <img
