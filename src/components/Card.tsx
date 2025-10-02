@@ -22,7 +22,7 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
     }
 
     return (
-        <div className="wrapper flex">
+        <div className="wrapper flex justify-center">
             <motion.div
                 whileHover={{ y: -5, boxShadow: "0 8px 20px rgba(0,0,0,0.3)" }}
                 className=" border rounded-2xl text-center w-20  lg:w-48 lg:h-56 flex flex-col "
@@ -39,7 +39,7 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
                     style={{ display: flip ? "flex" : "none" }}
                 >
                     <div className="time-container flex text-center items-center justify-center min-h-10 mt-2">
-                        <div className="border rounded-2xl w-14 lg:w-28 p-1 bg-white">
+                        <div className="flex items-center justify-center border rounded-2xl w-14 min-h-12 lg:w-28 p-1 bg-white">
                             <div className="time text-sm lg:text-xl">
                                 {daySchedule.time
                                     ? `${daylabel ? `${daylabel} ` : ""}${daySchedule.time}`
