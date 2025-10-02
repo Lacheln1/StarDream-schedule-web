@@ -20,6 +20,7 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
             </div>
         );
     }
+
     return (
         <div className="wrapper flex">
             <motion.div
@@ -40,7 +41,9 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
                     <div className="time-container flex justify-center min-h-10 mt-2">
                         <div className="border rounded-2xl lg:w-28 p-1 bg-white">
                             <div className="time text-sm lg:text-xl">
-                                {daySchedule.time ? `${daylabel} ${daySchedule.time}` : `휴방`}
+                                {daySchedule.time
+                                    ? `${daylabel ? `${daylabel} ` : ""}${daySchedule.time}`
+                                    : `휴방`}
                             </div>
                         </div>
                     </div>
