@@ -38,8 +38,8 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
                     className="front flex flex-col h-full gap-1"
                     style={{ display: flip ? "flex" : "none" }}
                 >
-                    <div className="time-container flex justify-center min-h-10 mt-2">
-                        <div className="border rounded-2xl lg:w-28 p-1 bg-white">
+                    <div className="time-container flex text-center items-center justify-center min-h-10 mt-2">
+                        <div className="border rounded-2xl w-14 lg:w-28 p-1 bg-white">
                             <div className="time text-sm lg:text-xl">
                                 {daySchedule.time
                                     ? `${daylabel ? `${daylabel} ` : ""}${daySchedule.time}`
@@ -49,11 +49,13 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
                     </div>
 
                     <div className="flex items-center justify-center todo-container min-h-[60px] ">
-                        <div className="todo text-sm lg:text-xl break-keep">{daySchedule.todo}</div>
+                        <div className="todo text-sm lg:text-lg xl:text-xl break-keep">
+                            {daySchedule.todo}
+                        </div>
                     </div>
 
                     <div className="chracterimage-container flex justify-center ">
-                        <div className="w-[50px] h-[50px] lg:w-[100px] lg:h-[100px] flex items-center justify-center ">
+                        <div className="w-[50px] h-[50px] mb-2 lg:w-[100px] lg:h-[100px] flex items-center justify-center ">
                             <img
                                 src={schedule.profileImg}
                                 alt="멤버프로필사진"
@@ -70,19 +72,19 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
                     }}
                 >
                     <div className="time-container flex flex-col items-center gap-5 my-3">
-                        <div className="border rounded-2xl w-28 p-1 bg-white hover:bg-gray-100">
+                        <div className="border rounded-2xl w-14 lg:w-28 p-1 bg-white hover:bg-gray-100">
                             <a href={schedule.chzzUrl}>
-                                <div className="time text-xl">치지직</div>
+                                <div className="time text-sm lg:text-xl">치지직</div>
                             </a>
                         </div>
-                        <div className="border rounded-2xl w-28 p-1 bg-white hover:bg-gray-100">
+                        <div className="border rounded-2xl w-14 lg:w-28 p-1 bg-white hover:bg-gray-100">
                             <a href={schedule.youtubeUrl}>
-                                <div className="time text-xl">유튜브</div>
+                                <div className="time text-sm lg:text-xl">유튜브</div>
                             </a>
                         </div>
-                        <div className="border rounded-2xl w-28 p-1 bg-white hover:bg-gray-100">
+                        <div className="border rounded-2xl w-14 lg:w-28 p-1 bg-white hover:bg-gray-100">
                             <a href={schedule.xUrl}>
-                                <div className="time text-xl">x</div>
+                                <div className="time text-sm lg:text-xl">X</div>
                             </a>
                         </div>
                     </div>
