@@ -20,7 +20,7 @@ const MainPage = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-50 p-8">
+        <div className="min-h-screen bg-[#feffef] p-8 ">
             <div className="max-w-[1800px] mx-auto">
                 <h1 className="text-4xl font-bold text-center mb-8">
                     스타드림 9.29~10.05 통합시간표
