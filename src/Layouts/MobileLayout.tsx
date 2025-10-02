@@ -26,27 +26,25 @@ const MobileLayout = ({ days, streamers, weeklyDate }: MobileLayoutProps) => {
                 </h1>
 
                 <div className="grid grid-cols-8 gap-4 mb-4">
-                    <div className="w-32"></div>
-                    {days.map((day) => (
-                        <div key={day.key} className="text-center font-bold text-2xl">
-                            {day.label}
+                    {streamers.map((streamer) => (
+                        <div key={streamer.name} className="text-center font-bold text-2xl">
+                            {streamer.name}
                         </div>
                     ))}
                 </div>
 
-                {streamers.map((streamer) => (
-                    <div key={streamer.name} className="grid grid-cols-8 gap-4 mb-4">
+                {days.map((day) => (
+                    <div key={day.key} className="grid grid-cols-8 gap-4 mb-4">
                         <div className="flex items-center justify-center">
-                            <div className="font-bold text-xl">{streamer.name}</div>
+                            <div className="font-bold text-xl">{day.label}</div>
+                            {streamers.map((streamer) => (
+                                <Card
+                                    key={`${streamer.name}-${day.key}`}
+                                    schedule={streamer.schedule}
+                                    day={day.key}
+                                />
+                            ))}
                         </div>
-
-                        {days.map((day) => (
-                            <Card
-                                key={`${streamer.name}-${day.key}`}
-                                schedule={streamer.schedule}
-                                day={day.key}
-                            />
-                        ))}
                     </div>
                 ))}
             </div>
