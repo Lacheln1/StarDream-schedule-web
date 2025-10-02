@@ -23,7 +23,7 @@ const Card = ({ schedule, day }: CardProps) => {
         <div className="wrapper flex">
             <motion.div
                 whileHover={{ y: -5, boxShadow: "0 8px 20px rgba(0,0,0,0.3)" }}
-                className="border rounded-2xl text-center w-48 h-56 flex flex-col "
+                className=" border rounded-2xl text-center min-w-20  lg:w-48 lg:h-56 flex flex-col "
                 style={{
                     transformStyle: "preserve-3d",
                     backgroundColor: `${schedule.personalColor}`,
@@ -37,8 +37,8 @@ const Card = ({ schedule, day }: CardProps) => {
                     style={{ display: flip ? "flex" : "none" }}
                 >
                     <div className="time-container flex justify-center min-h-10 mt-2">
-                        <div className="border rounded-2xl w-28 p-1 bg-white">
-                            <div className="time text-xl">
+                        <div className="border rounded-2xl lg:w-28 p-1 bg-white">
+                            <div className="time text-sm lg:text-xl">
                                 {daySchedule.time ? daySchedule.time : `휴방`}
                             </div>
                         </div>
@@ -49,7 +49,7 @@ const Card = ({ schedule, day }: CardProps) => {
                     </div>
 
                     <div className="chracterimage-container flex justify-center ">
-                        <div className="w-[100px] h-[100px] flex items-center justify-center ">
+                        <div className="w-[50px] h-[50px] lg:w-[100px] lg:h-[100px] flex items-center justify-center ">
                             <img
                                 src={schedule.profileImg}
                                 alt="멤버프로필사진"
