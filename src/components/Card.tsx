@@ -5,8 +5,9 @@ import { StreamerSchedule } from "../types/schedule";
 interface CardProps {
     schedule: StreamerSchedule;
     day: "mon" | "tue" | "wed" | "thu" | "fri" | "sat" | "sun";
+    daylabel?: string;
 }
-const Card = ({ schedule, day }: CardProps) => {
+const Card = ({ schedule, day, daylabel }: CardProps) => {
     const [flip, setFlip] = useState(true);
     const daySchedule = schedule[day]?.[0];
 
@@ -23,7 +24,7 @@ const Card = ({ schedule, day }: CardProps) => {
         <div className="wrapper flex">
             <motion.div
                 whileHover={{ y: -5, boxShadow: "0 8px 20px rgba(0,0,0,0.3)" }}
-                className=" border rounded-2xl text-center min-w-20  lg:w-48 lg:h-56 flex flex-col "
+                className=" border rounded-2xl text-center w-20  lg:w-48 lg:h-56 flex flex-col "
                 style={{
                     transformStyle: "preserve-3d",
                     backgroundColor: `${schedule.personalColor}`,
@@ -39,13 +40,13 @@ const Card = ({ schedule, day }: CardProps) => {
                     <div className="time-container flex justify-center min-h-10 mt-2">
                         <div className="border rounded-2xl lg:w-28 p-1 bg-white">
                             <div className="time text-sm lg:text-xl">
-                                {daySchedule.time ? daySchedule.time : `휴방`}
+                                {daySchedule.time ? `${daylabel} ${daySchedule.time}` : `휴방`}
                             </div>
                         </div>
                     </div>
 
                     <div className="flex items-center justify-center todo-container min-h-[60px] ">
-                        <div className="todo text-xl break-keep">{daySchedule.todo}</div>
+                        <div className="todo text-sm lg:text-xl break-keep">{daySchedule.todo}</div>
                     </div>
 
                     <div className="chracterimage-container flex justify-center ">
