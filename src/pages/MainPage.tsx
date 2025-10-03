@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { UreiSchedule, OnhayanSchedule, HanavinSchedule, IruneSchedule } from "../data/schedules";
+import { motion } from "framer-motion";
 import PCLayout from "./../Layouts/PCLayout";
 import MobileLayout from "../Layouts/MobileLayout";
+import { pageVariants } from "../components/FramerAnimation";
 
 const days = [
     { key: "mon", label: "월" },
@@ -25,6 +27,16 @@ const weeklyDate = "9.29 ~ 10.05";
 const MainPage = () => {
     const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
+        // 브라우저의 스크롤 복원 기능 비활성화
+        if ("scrollRestoration" in window.history) {
+            window.history.scrollRestoration = "manual";
+        }
+
+        // 스크롤 최상단으로
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+
         const checkMobile = () => {
             setIsMobile(window.innerWidth < 768);
         };
