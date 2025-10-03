@@ -39,7 +39,7 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
                     style={{ display: flip ? "flex" : "none" }}
                 >
                     <div className="time-container flex text-center items-center justify-center min-h-10 mt-2">
-                        <div className="flex items-center justify-center border rounded-2xl w-14 min-h-8  lg:min-h-12 lg:w-20 xl:w-28 p-1 bg-white">
+                        <div className="flex items-center justify-center border rounded-2xl w-14 min-h-[50px] lg:w-20 xl:w-28 p-1 bg-white">
                             <div className="time text-sm lg:text-lg xl:text-xl">
                                 {daySchedule.time
                                     ? `${daylabel ? `${daylabel} ` : ""}${daySchedule.time}`
@@ -56,14 +56,12 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
 
                     <div className="chracterimage-container flex justify-center ">
                         <div className="w-[50px] h-[50px] mb-2 lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px] flex items-center justify-center ">
-                            <a href={schedule.chzzUrl}>
-                                <img
-                                    src={schedule.profileImg}
-                                    alt="멤버프로필사진"
-                                    title="치지직 채널로 이동합니다."
-                                    className="h-full object-contain rounded-full "
-                                />
-                            </a>
+                            <img
+                                src={schedule.profileImg}
+                                alt="멤버프로필사진"
+                                title="치지직 채널로 이동합니다."
+                                className="h-full object-contain rounded-full "
+                            />
                         </div>
                     </div>
                 </motion.div>
