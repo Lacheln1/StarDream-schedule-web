@@ -1,8 +1,8 @@
 import { StreamerSchedule } from "../types/schedule";
-import UreiProfileImg from "../images/urei_profile.png";
-import OnhayanProfileImg from "../images/onhayan_profile.png";
-import HanabinProfileImg from "../images/hanavin_profile.png";
-import IruneProfileImg from "../images/irune_profile.png";
+import UreiProfileImg from "../images/urei2.png";
+import OnhayanProfileImg from "../images/onhayan2.png";
+import HanabinProfileImg from "../images/hanavin2.png";
+import IruneProfileImg from "../images/irune2.png";
 
 export const UreiSchedule: StreamerSchedule = {
     mon: [{ todo: "그림뱅 + 게임정하기", time: "19:00" }],
