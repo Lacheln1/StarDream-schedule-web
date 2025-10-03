@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { UreiSchedule, OnhayanSchedule, HanavinSchedule, IruneSchedule } from "../data/schedules";
-import { motion } from "framer-motion";
 import PCLayout from "./../Layouts/PCLayout";
 import MobileLayout from "../Layouts/MobileLayout";
-import { pageVariants } from "../components/FramerAnimation";
 
 const days = [
     { key: "mon", label: "월" },
