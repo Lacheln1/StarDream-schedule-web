@@ -1,6 +1,8 @@
 import Card from "../components/Card";
+import { pageVariants } from "../components/FramerAnimation";
 import { StreamerSchedule } from "../types/schedule";
 import StarDreamLogo from "/STARDREAM_.png";
+import { motion } from "framer-motion";
 interface Day {
     key: "mon" | "tue" | "wed" | "thu" | "fri" | "sat" | "sun";
     label: string;
@@ -19,7 +21,13 @@ interface PCLayoutProps {
 
 const PCLayout = ({ days, streamers, weeklyDate }: PCLayoutProps) => {
     return (
-        <div className="min-h-screen bg-[#feffef] p-8 ">
+        <motion.div
+            className="min-h-screen bg-[#feffef] p-8 "
+            variants={pageVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <div className="max-w-[1800px] mx-auto">
                 <div className="flex justify-center text-center items-center gap-3 mb-8">
                     <a href="https://cafe.naver.com/stardreamco">
@@ -62,7 +70,7 @@ const PCLayout = ({ days, streamers, weeklyDate }: PCLayoutProps) => {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
 
