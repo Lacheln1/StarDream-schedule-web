@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { UreiSchedule, OnhayanSchedule, HanabinSchedule, IruneSchedule } from "../data/schedules";
+import { UreiSchedule, OnhayanSchedule, HanavinSchedule, IruneSchedule } from "../data/schedules";
 import PCLayout from "./../Layouts/PCLayout";
 import MobileLayout from "../Layouts/MobileLayout";
 
@@ -15,7 +15,7 @@ const days = [
 
 const streamers = [
     { schedule: UreiSchedule, name: "유레이" },
-    { schedule: HanabinSchedule, name: "하나빈" },
+    { schedule: HanavinSchedule, name: "하나빈" },
     { schedule: OnhayanSchedule, name: "온하얀" },
     { schedule: IruneSchedule, name: "이루네" },
 ];

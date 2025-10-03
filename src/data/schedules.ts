@@ -34,7 +34,7 @@ export const OnhayanSchedule: StreamerSchedule = {
     personalColor: "#f0ffec",
 };
 
-export const HanabinSchedule: StreamerSchedule = {
+export const HanavinSchedule: StreamerSchedule = {
     mon: [{ todo: "분내 저챗", time: "21:00" }],
     tue: [{ todo: "OFFLINE", time: "" }],
     wed: [{ todo: "맞춤법 용사", time: "21:00" }],
