@@ -1,5 +1,6 @@
 import Card from "../components/Card";
 import { StreamerSchedule } from "../types/schedule";
+import StarDreamLogo from "/STARDREAM_.png";
 
 interface Day {
     key: "mon" | "tue" | "wed" | "thu" | "fri" | "sat" | "sun";
@@ -21,9 +22,18 @@ const MobileLayout = ({ days, streamers, weeklyDate }: MobileLayoutProps) => {
     return (
         <div className="min-h-screen bg-[#feffef] p-4">
             <div className="max-w-full mx-auto">
-                <h1 className="text-2xl font-bold text-center mb-6">
-                    스타드림 {weeklyDate} 통합시간표
-                </h1>
+                <div className="flex justify-center text-center items-center gap-3 mb-5">
+                    <a href="https://cafe.naver.com/stardreamco">
+                        <img
+                            src={StarDreamLogo}
+                            alt="스타드림로고"
+                            className="w-[30px] h-[30px] xl:w-[36px] xl:h-[36px]"
+                        />
+                    </a>
+                    <div className="text-xl font-bold text-center">
+                        스타드림 {weeklyDate} 통합시간표
+                    </div>
+                </div>
 
                 <div className="grid gap-2 mb-4" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
                     {streamers.map((streamer) => (
