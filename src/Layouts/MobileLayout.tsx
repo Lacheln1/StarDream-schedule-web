@@ -27,6 +27,7 @@ const MobileLayout = ({ days, streamers, weeklyDate }: MobileLayoutProps) => {
                         <img
                             src={StarDreamLogo}
                             alt="스타드림로고"
+                            title="네이버 카페로 이동합니다"
                             className="w-[30px] h-[30px] xl:w-[36px] xl:h-[36px]"
                         />
                     </a>

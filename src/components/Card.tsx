@@ -60,6 +60,7 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
                                 <img
                                     src={schedule.profileImg}
                                     alt="멤버프로필사진"
+                                    title="치지직 채널로 이동합니다."
                                     className="h-full object-contain rounded-full "
                                 />
                             </a>
