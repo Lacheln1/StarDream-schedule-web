@@ -25,7 +25,7 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
         <div className="wrapper flex justify-center">
             <motion.div
                 whileHover={{ y: -5, boxShadow: "0 8px 20px rgba(0,0,0,0.3)" }}
-                className=" border rounded-2xl text-center w-20  lg:w-48 lg:h-56 flex flex-col "
+                className=" border rounded-2xl text-center w-20  lg:w-48 lg:h-60 flex flex-col "
                 style={{
                     transformStyle: "preserve-3d",
                     backgroundColor: `${schedule.personalColor}`,
@@ -35,12 +35,12 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
                 onClick={() => setFlip((prev) => !prev)}
             >
                 <motion.div
-                    className="front flex flex-col h-full gap-1"
+                    className="front flex flex-col h-full justify-center gap-1 px-2"
                     style={{ display: flip ? "flex" : "none" }}
                 >
                     <div className="time-container flex text-center items-center justify-center min-h-10 mt-2">
-                        <div className="flex items-center justify-center border rounded-2xl w-14 min-h-12 lg:w-28 p-1 bg-white">
-                            <div className="time text-sm lg:text-xl">
+                        <div className="flex items-center justify-center border rounded-2xl w-14 min-h-8  lg:min-h-12 lg:w-20 xl:w-28 p-1 bg-white">
+                            <div className="time text-sm lg:text-lg xl:text-xl">
                                 {daySchedule.time
                                     ? `${daylabel ? `${daylabel} ` : ""}${daySchedule.time}`
                                     : `휴방`}
@@ -48,19 +48,21 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-center todo-container min-h-[60px] ">
-                        <div className="todo text-sm lg:text-lg xl:text-xl break-keep">
+                    <div className="flex items-center justify-center todo-container min-h-[80px] xl:min-h-[70px] ">
+                        <div className="todo text-sm lg:text-base xl:text-xl break-keep">
                             {daySchedule.todo}
                         </div>
                     </div>
 
                     <div className="chracterimage-container flex justify-center ">
-                        <div className="w-[50px] h-[50px] mb-2 lg:w-[100px] lg:h-[100px] flex items-center justify-center ">
-                            <img
-                                src={schedule.profileImg}
-                                alt="멤버프로필사진"
-                                className="h-full object-contain rounded-2xl"
-                            />
+                        <div className="w-[50px] h-[50px] mb-2 lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px] flex items-center justify-center ">
+                            <a href={schedule.chzzUrl}>
+                                <img
+                                    src={schedule.profileImg}
+                                    alt="멤버프로필사진"
+                                    className="h-full object-contain rounded-full "
+                                />
+                            </a>
                         </div>
                     </div>
                 </motion.div>
