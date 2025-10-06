@@ -74,17 +74,17 @@ const Card = ({ schedule, day, daylabel }: CardProps) => {
                 >
                     <div className="time-container flex flex-col items-center gap-5 my-3">
                         <div className="border rounded-2xl w-14 lg:w-28 p-1 bg-white hover:bg-gray-100">
-                            <a href={schedule.chzzUrl}>
+                            <a href={schedule.chzzUrl} target="_blank">
                                 <div className="time text-sm lg:text-xl">치지직</div>
                             </a>
                         </div>
                         <div className="border rounded-2xl w-14 lg:w-28 p-1 bg-white hover:bg-gray-100">
-                            <a href={schedule.youtubeUrl}>
+                            <a href={schedule.youtubeUrl} target="_blank">
                                 <div className="time text-sm lg:text-xl">유튜브</div>
                             </a>
                         </div>
                         <div className="border rounded-2xl w-14 lg:w-28 p-1 bg-white hover:bg-gray-100">
-                            <a href={schedule.xUrl}>
+                            <a href={schedule.xUrl} target="_blank">
                                 <div className="time text-sm lg:text-xl">X</div>
                             </a>
                         </div>
