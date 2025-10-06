@@ -20,7 +20,7 @@ const streamers = [
     { schedule: IruneSchedule, name: "이루네" },
 ];
 
-const weeklyDate = "9.29 ~ 10.05";
+const weeklyDate = "10.06 ~ 10.12";
 
 const MainPage = () => {
     const [isMobile, setIsMobile] = useState(false);
