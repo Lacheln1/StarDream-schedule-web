@@ -22,13 +22,13 @@ export const UreiSchedule: StreamerSchedule = {
 
 // 온하얀
 export const OnhayanSchedule: StreamerSchedule = {
-    mon: [{ todo: "미정", time: "미정" }],
+    mon: [{ todo: "게릴라", time: "미정" }],
     tue: [{ todo: "스타드림 추석연휴합방 in 유레이 방송", time: "21:00" }],
-    wed: [{ todo: "미정", time: "미정" }],
-    thu: [{ todo: "미정", time: "미정" }],
-    fri: [{ todo: "미정", time: "미정" }],
-    sat: [{ todo: "미정", time: "미정" }],
-    sun: [{ todo: "미정", time: "미정" }],
+    wed: [{ todo: "OFFLINE", time: "" }],
+    thu: [{ todo: "언더테일", time: "20:00" }],
+    fri: [{ todo: "테마 저챗", time: "14:00" }],
+    sat: [{ todo: "OFFLINE", time: "" }],
+    sun: [{ todo: "언더테일, 시간표 작성", time: "21:00" }],
     profileImg: OnhayanProfileImg,
     chzzUrl: "https://chzzk.naver.com/91caa53fc6cf5ee3cdbc802bd23bf155",
     youtubeUrl: "https://www.youtube.com/@ONHAYAN090",
